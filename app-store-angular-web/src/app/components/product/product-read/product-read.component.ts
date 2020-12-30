@@ -9,7 +9,7 @@ import {ProductService} from "../product.service";
 })
 export class ProductReadComponent implements OnInit {
 
-  private products: Product[];
+  products: Product[];
 
   constructor(private produtoService: ProductService) { }
 
