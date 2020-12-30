@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ProductService } from './../product.service';
+import {Product} from "../product.model";
 
 @Component({
   selector: 'app-product-create',
@@ -15,8 +16,16 @@ export class ProductCreateComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  googleHomeProduct: Product = {
+    name: 'Google Home',
+    price: 220.99
+  }
+
   createProduct(): void{
-    this.productService.showMesssage('Produto salvo');
+    this.productService.cadastrarProduto(this.googleHomeProduct).subscribe(() =>{
+      this.productService.showMesssage('Produto salvo');
+      this.router.navigate(['/products']);
+    });
   }
 
   cancel(): void{

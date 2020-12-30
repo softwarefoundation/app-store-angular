@@ -1,19 +1,24 @@
 {
-    "products": [
-        {
-            "id": 1,
-            "name": "Piscina de bolinhas",
-            "price": 649.99
-        },
-        {
-            "id": 2,
-            "name": "Smart phone",
-            "price": 1649.99
-        },
-        {
-            "id": 3,
-            "name": "Smart TV",
-            "price": 2799.99
-        }
-    ]
+  "products": [
+    {
+      "id": 1,
+      "name": "Piscina de bolinhas",
+      "price": 649.99
+    },
+    {
+      "id": 2,
+      "name": "Smart phone",
+      "price": 1649.99
+    },
+    {
+      "id": 3,
+      "name": "Smart TV",
+      "price": 2799.99
+    },
+    {
+      "name": "Google Home",
+      "price": 220.99,
+      "id": 4
+    }
+  ]
 }
