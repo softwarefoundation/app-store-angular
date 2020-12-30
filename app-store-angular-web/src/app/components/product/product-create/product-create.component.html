@@ -1,2 +1,17 @@
-<button mat-raised-button (click)="createProduct()" color="primary" >Salvar</button>
-<button mat-raised-button (click)="cancel()" >Cancelar</button>
+<mat-card>
+    <mat-card-title>
+        Novo Produto
+    </mat-card-title>
+    <form>
+        <mat-form-field>
+            <input [(ngModel)]="product.name" name="name" matInput placeholder="Nome">
+        </mat-form-field>
+        <mat-form-field>
+            <input [(ngModel)]="product.price" name="price" matInput placeholder="Preço (RS)">
+        </mat-form-field>
+    </form>
+
+    <button mat-raised-button (click)="cancel()" >Cancelar</button>
+    <button mat-raised-button (click)="createProduct()" color="primary" >Salvar</button>
+</mat-card>
+

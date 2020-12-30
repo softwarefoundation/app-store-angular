@@ -10,19 +10,21 @@ import {Product} from "../product.model";
 })
 export class ProductCreateComponent implements OnInit {
 
+  product: Product = {
+    name: '',
+    price: null
+  }
+
   constructor(private productService: ProductService,
     private router: Router) { }
 
   ngOnInit(): void {
   }
 
-  googleHomeProduct: Product = {
-    name: 'Google Home',
-    price: 220.99
-  }
+
 
   createProduct(): void{
-    this.productService.cadastrarProduto(this.googleHomeProduct).subscribe(() =>{
+    this.productService.cadastrarProduto(this.product).subscribe(() =>{
       this.productService.showMesssage('Produto salvo');
       this.router.navigate(['/products']);
     });
