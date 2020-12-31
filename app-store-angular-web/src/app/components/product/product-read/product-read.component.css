@@ -1,3 +1,11 @@
 table{
     width: 100%;
 }
+
+a.edit i{
+    color: goldenrod;
+}
+
+a.delete i{
+    color: tomato;
+}
