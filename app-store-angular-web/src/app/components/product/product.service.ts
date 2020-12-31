@@ -40,4 +40,9 @@ export class ProductService {
     return this.httpClient.put<Product>(url,product);
   }
 
+  excluirProduto(id:number): Observable<Product>{
+    const url = `${this.baseUrl}/${id}`;
+    return this.httpClient.delete<Product>(url);
+  }
+
 }
