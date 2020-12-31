@@ -30,4 +30,14 @@ export class ProductService {
     return this.httpClient.get<Product[]>(this.baseUrl);
   }
 
+  pesquisarPorId(id:string):Observable<Product>{
+    const url = `${this.baseUrl}/${id}`;
+    return this.httpClient.get<Product>(url);
+  }
+
+  atualizarProduto(product: Product): Observable<Product>{
+    const url = `${this.baseUrl}/${product.id}`;
+    return this.httpClient.put<Product>(url,product);
+  }
+
 }
